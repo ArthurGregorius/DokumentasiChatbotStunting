@@ -1,11 +1,4 @@
-# 🐳 Deployment: Docker Setup
-
-<div align="center">
-
-![Deployment](https://img.shields.io/badge/Deployment-Docker-blue)
-![Status](https://img.shields.io/badge/Status-Active-green)
-
-</div>
+# Docker Setup
 
 ## 📋 Overview
 
@@ -14,6 +7,7 @@ Dokumentasi ini menjelaskan konfigurasi dan penggunaan Docker untuk deployment C
 ## 🏗️ Docker Configuration
 
 ### 1. Dockerfile
+
 ```dockerfile
 # Base image
 FROM node:14-alpine
@@ -39,6 +33,7 @@ CMD ["npm", "start"]
 ```
 
 ### 2. Docker Compose
+
 ```yaml
 # docker-compose.yml
 version: '3.8'
@@ -88,6 +83,7 @@ volumes:
 ## 🚀 Deployment Steps
 
 ### 1. Build Images
+
 ```bash
 # Build all services
 docker-compose build
@@ -97,6 +93,7 @@ docker-compose build app
 ```
 
 ### 2. Start Services
+
 ```bash
 # Start all services
 docker-compose up -d
@@ -106,6 +103,7 @@ docker-compose up -d app
 ```
 
 ### 3. View Logs
+
 ```bash
 # View all logs
 docker-compose logs -f
@@ -115,6 +113,7 @@ docker-compose logs -f app
 ```
 
 ### 4. Stop Services
+
 ```bash
 # Stop all services
 docker-compose down
@@ -126,6 +125,7 @@ docker-compose down -v
 ## 🔧 Development Setup
 
 ### 1. Development Dockerfile
+
 ```dockerfile
 # Dockerfile.dev
 FROM node:14-alpine
@@ -143,6 +143,7 @@ CMD ["npm", "run", "dev"]
 ```
 
 ### 2. Development Docker Compose
+
 ```yaml
 # docker-compose.dev.yml
 version: '3.8'
@@ -195,6 +196,7 @@ volumes:
 ```
 
 ### 3. Run Development Environment
+
 ```bash
 docker-compose -f docker-compose.dev.yml up -d
 ```
@@ -202,6 +204,7 @@ docker-compose -f docker-compose.dev.yml up -d
 ## 🔍 Monitoring
 
 ### 1. Container Health Checks
+
 ```yaml
 # docker-compose.yml
 services:
@@ -214,6 +217,7 @@ services:
 ```
 
 ### 2. Resource Limits
+
 ```yaml
 # docker-compose.yml
 services:
@@ -231,6 +235,7 @@ services:
 ## 🔐 Security
 
 ### 1. Non-Root User
+
 ```dockerfile
 # Dockerfile
 FROM node:14-alpine
@@ -258,6 +263,7 @@ CMD ["npm", "start"]
 ```
 
 ### 2. Security Scanning
+
 ```bash
 # Install Trivy
 brew install aquasecurity/trivy/trivy
@@ -269,6 +275,7 @@ trivy image chatbot-stunting:latest
 ## 📦 Multi-Stage Builds
 
 ### 1. Production Build
+
 ```dockerfile
 # Build stage
 FROM node:14-alpine AS builder
@@ -299,6 +306,7 @@ CMD ["npm", "start"]
 ## 🔄 CI/CD Integration
 
 ### 1. GitHub Actions
+
 ```yaml
 # .github/workflows/docker.yml
 name: Docker
@@ -332,19 +340,3 @@ jobs:
           push: true
           tags: your-org/chatbot-stunting:latest
 ```
-
-## 📚 Dokumentasi Terkait
-
-- [Environment Configuration](environment.md)
-- [Production Guidelines](production.md)
-- [Local Setup](../development/local-setup.md)
-
----
-
-<div align="center">
-
-### 🔗 Navigasi
-
-[⬅️ Kembali ke Code Style](../development/code-style.md) | [Lanjut ke Environment Configuration ➡️](environment.md)
-
-</div> 

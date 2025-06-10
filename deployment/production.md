@@ -1,11 +1,4 @@
-# 🚀 Deployment: Production Guidelines
-
-<div align="center">
-
-![Deployment](https://img.shields.io/badge/Deployment-Production-blue)
-![Status](https://img.shields.io/badge/Status-Active-green)
-
-</div>
+# Production Guidelines
 
 ## 📋 Overview
 
@@ -14,6 +7,7 @@ Dokumentasi ini menjelaskan panduan deployment ke production untuk Chatbot Ident
 ## 🛠️ Production Setup
 
 ### 1. Server Requirements
+
 ```bash
 # Minimum Requirements
 CPU: 2 cores
@@ -29,6 +23,7 @@ OS: Ubuntu 20.04 LTS
 ```
 
 ### 2. System Dependencies
+
 ```bash
 # Update system
 sudo apt update && sudo apt upgrade -y
@@ -45,6 +40,7 @@ sudo apt install -y \
 ```
 
 ### 3. Application Setup
+
 ```bash
 # Clone repository
 git clone https://github.com/your-org/chatbot-stunting.git
@@ -60,6 +56,7 @@ docker-compose -f docker-compose.prod.yml up -d
 ## 🔒 Security Measures
 
 ### 1. Firewall Configuration
+
 ```bash
 # Enable UFW
 sudo ufw enable
@@ -76,6 +73,7 @@ sudo ufw allow 3000/tcp
 ```
 
 ### 2. SSL Certificate
+
 ```bash
 # Install SSL certificate
 sudo certbot --nginx -d api.chatbot-stunting.com
@@ -85,6 +83,7 @@ sudo certbot renew --dry-run
 ```
 
 ### 3. Database Security
+
 ```bash
 # Enable authentication
 mongod --auth
@@ -101,6 +100,7 @@ db.createUser({
 ## 📊 Monitoring
 
 ### 1. Application Monitoring
+
 ```javascript
 // monitoring.js
 const prometheus = require('prom-client');
@@ -124,6 +124,7 @@ app.get('/metrics', async (req, res) => {
 ```
 
 ### 2. Log Management
+
 ```javascript
 // logger.js
 const winston = require('winston');
@@ -150,6 +151,7 @@ const logger = winston.createLogger({
 ## 🔄 Backup Strategy
 
 ### 1. Database Backup
+
 ```bash
 #!/bin/bash
 # backup.sh
@@ -173,6 +175,7 @@ find $BACKUP_DIR -type f -mtime +7 -delete
 ```
 
 ### 2. Application Backup
+
 ```bash
 #!/bin/bash
 # app-backup.sh
@@ -192,6 +195,7 @@ find $BACKUP_DIR -type f -mtime +7 -delete
 ## 🔧 Maintenance
 
 ### 1. Update Procedure
+
 ```bash
 #!/bin/bash
 # update.sh
@@ -213,6 +217,7 @@ docker image prune -f
 ```
 
 ### 2. Health Check
+
 ```bash
 #!/bin/bash
 # health-check.sh
@@ -233,6 +238,7 @@ fi
 ## 📈 Scaling
 
 ### 1. Horizontal Scaling
+
 ```yaml
 # docker-compose.prod.yml
 version: '3.8'
@@ -264,6 +270,7 @@ services:
 ```
 
 ### 2. Load Balancer Configuration
+
 ```nginx
 # nginx.conf
 upstream app_servers {
@@ -283,19 +290,3 @@ server {
     }
 }
 ```
-
-## 📚 Dokumentasi Terkait
-
-- [Docker Setup](docker.md)
-- [Environment Configuration](environment.md)
-- [Local Setup](../development/local-setup.md)
-
----
-
-<div align="center">
-
-### 🔗 Navigasi
-
-[⬅️ Kembali ke Environment Configuration](environment.md) | [Lanjut ke Local Setup ➡️](../development/local-setup.md)
-
-</div> 

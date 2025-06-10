@@ -1,11 +1,4 @@
-# 🎮 API Controllers
-
-<div align="center">
-
-![API Controllers](https://img.shields.io/badge/API-Controllers-blue)
-![Status](https://img.shields.io/badge/Status-Active-green)
-
-</div>
+# Controllers
 
 ## 📋 Overview
 
@@ -14,6 +7,7 @@ Dokumentasi ini menjelaskan controller-controller yang digunakan dalam API Chatb
 ## 👤 User Controller
 
 ### Register User
+
 ```javascript
 // controllers/userController.js
 const registerUser = async (req, res) => {
@@ -48,6 +42,7 @@ const registerUser = async (req, res) => {
 ```
 
 ### Get User Profile
+
 ```javascript
 const getUserProfile = async (req, res) => {
   try {
@@ -74,6 +69,7 @@ const getUserProfile = async (req, res) => {
 ## 👶 Child Controller
 
 ### Register Child
+
 ```javascript
 // controllers/childController.js
 const registerChild = async (req, res) => {
@@ -111,6 +107,7 @@ const registerChild = async (req, res) => {
 ```
 
 ### Get Child Data
+
 ```javascript
 const getChildData = async (req, res) => {
   try {
@@ -137,6 +134,7 @@ const getChildData = async (req, res) => {
 ## 📝 Questionnaire Controller
 
 ### Submit Questionnaire
+
 ```javascript
 // controllers/questionnaireController.js
 const submitQuestionnaire = async (req, res) => {
@@ -170,6 +168,7 @@ const submitQuestionnaire = async (req, res) => {
 ```
 
 ### Get Questionnaire Results
+
 ```javascript
 const getQuestionnaireResults = async (req, res) => {
   try {
@@ -190,6 +189,7 @@ const getQuestionnaireResults = async (req, res) => {
 ## 💬 Message Controller
 
 ### Send Message
+
 ```javascript
 // controllers/messageController.js
 const sendMessage = async (req, res) => {
@@ -223,6 +223,7 @@ const sendMessage = async (req, res) => {
 ```
 
 ### Get Message History
+
 ```javascript
 const getMessageHistory = async (req, res) => {
   try {
@@ -247,6 +248,7 @@ const getMessageHistory = async (req, res) => {
 ## 🔄 Session Controller
 
 ### Create Session
+
 ```javascript
 // controllers/sessionController.js
 const createSession = async (req, res) => {
@@ -270,6 +272,7 @@ const createSession = async (req, res) => {
 ```
 
 ### End Session
+
 ```javascript
 const endSession = async (req, res) => {
   try {
@@ -286,20 +289,3 @@ const endSession = async (req, res) => {
   }
 };
 ```
-
-## 📚 Dokumentasi Terkait
-
-- [API Overview](README.md)
-- [Configuration](configuration.md)
-- [Models](models.md)
-- [Services](services.md)
-
----
-
-<div align="center">
-
-### 🔗 Navigasi
-
-[⬅️ Kembali ke Configuration](configuration.md) | [Lanjut ke Models ➡️](models.md)
-
-</div> 

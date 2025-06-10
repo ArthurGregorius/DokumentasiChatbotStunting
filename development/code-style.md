@@ -1,11 +1,4 @@
-# 📝 Development: Code Style Guide
-
-<div align="center">
-
-![Development](https://img.shields.io/badge/Development-Code%20Style-blue)
-![Status](https://img.shields.io/badge/Status-Active-green)
-
-</div>
+# Code Style
 
 ## 📋 Overview
 
@@ -14,6 +7,7 @@ Dokumentasi ini menjelaskan panduan penulisan kode untuk Chatbot Identifikasi St
 ## 🎨 Code Formatting
 
 ### 1. TypeScript Configuration
+
 ```json
 // tsconfig.json
 {
@@ -38,6 +32,7 @@ Dokumentasi ini menjelaskan panduan penulisan kode untuk Chatbot Identifikasi St
 ```
 
 ### 2. ESLint Configuration
+
 ```javascript
 // .eslintrc.js
 module.exports = {
@@ -62,6 +57,7 @@ module.exports = {
 ```
 
 ### 3. Prettier Configuration
+
 ```json
 // .prettierrc
 {
@@ -79,6 +75,7 @@ module.exports = {
 ## 📝 Naming Conventions
 
 ### 1. Files and Directories
+
 ```typescript
 // File naming
 user.service.ts        // Service files
@@ -101,6 +98,7 @@ src/
 ```
 
 ### 2. Variables and Functions
+
 ```typescript
 // Variables
 const userCount: number = 0;
@@ -134,6 +132,7 @@ class UserService {
 ## 🏗️ Code Structure
 
 ### 1. Module Organization
+
 ```typescript
 // user.module.ts
 import { Module } from '@nestjs/common';
@@ -150,6 +149,7 @@ export class UserModule {}
 ```
 
 ### 2. Service Pattern
+
 ```typescript
 // user.service.ts
 import { Injectable } from '@nestjs/common';
@@ -175,6 +175,7 @@ export class UserService {
 ## 🔍 Code Quality
 
 ### 1. Type Safety
+
 ```typescript
 // user.interface.ts
 export interface User {
@@ -207,6 +208,7 @@ export class CreateUserDto {
 ```
 
 ### 2. Error Handling
+
 ```typescript
 // error-handler.ts
 export class AppError extends Error {
@@ -246,6 +248,7 @@ export const errorHandler = (
 ## 📚 Documentation
 
 ### 1. JSDoc Comments
+
 ```typescript
 /**
  * User service for managing user operations
@@ -274,7 +277,8 @@ export class UserService {
 ```
 
 ### 2. README Files
-```markdown
+
+````markdown
 # User Module
 
 ## Overview
@@ -297,10 +301,12 @@ const user = await userService.createUser({
   phone: '+6281234567890',
   address: 'Test Address'
 });
-```
+````
 
 ## API
-See [API Documentation](../api/README.md) for detailed endpoint information.
+
+See [API Documentation](../api/) for detailed endpoint information.
+
 ```
 
 ## 📚 Dokumentasi Terkait
@@ -318,3 +324,4 @@ See [API Documentation](../api/README.md) for detailed endpoint information.
 [⬅️ Kembali ke Testing Guidelines](testing.md) | [Lanjut ke Production Guidelines ➡️](../deployment/production.md)
 
 </div> 
+```

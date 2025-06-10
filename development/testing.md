@@ -1,11 +1,4 @@
-# 🧪 Development: Testing Guidelines
-
-<div align="center">
-
-![Development](https://img.shields.io/badge/Development-Testing-blue)
-![Status](https://img.shields.io/badge/Status-Active-green)
-
-</div>
+# Testing
 
 ## 📋 Overview
 
@@ -14,6 +7,7 @@ Dokumentasi ini menjelaskan panduan testing untuk Chatbot Identifikasi Stunting,
 ## 🎯 Testing Strategy
 
 ### 1. Unit Testing
+
 ```typescript
 // src/__tests__/unit/user.test.ts
 import { UserService } from '../../services/user.service';
@@ -59,6 +53,7 @@ describe('UserService', () => {
 ```
 
 ### 2. Integration Testing
+
 ```typescript
 // src/__tests__/integration/user.test.ts
 import request from 'supertest';
@@ -99,6 +94,7 @@ describe('User API', () => {
 ```
 
 ### 3. End-to-End Testing
+
 ```typescript
 // src/__tests__/e2e/chatbot.test.ts
 import { TestClient } from '../utils/test-client';
@@ -138,6 +134,7 @@ describe('Chatbot Flow', () => {
 ## 🛠️ Test Setup
 
 ### 1. Test Environment
+
 ```typescript
 // src/__tests__/utils/test-environment.ts
 import mongoose from 'mongoose';
@@ -160,6 +157,7 @@ export class TestEnvironment {
 ```
 
 ### 2. Test Utilities
+
 ```typescript
 // src/__tests__/utils/test-utils.ts
 import { UserModel } from '../../models/user.model';
@@ -188,6 +186,7 @@ export const createTestChild = async (userId: string, childData = {}) => {
 ## 📊 Test Coverage
 
 ### 1. Coverage Configuration
+
 ```javascript
 // jest.config.js
 module.exports = {
@@ -209,6 +208,7 @@ module.exports = {
 ```
 
 ### 2. Coverage Report
+
 ```bash
 # Generate coverage report
 npm run test:coverage
@@ -220,6 +220,7 @@ open coverage/lcov-report/index.html
 ## 🔄 Continuous Integration
 
 ### 1. GitHub Actions
+
 ```yaml
 # .github/workflows/test.yml
 name: Test
@@ -265,6 +266,7 @@ jobs:
 ## 📝 Test Documentation
 
 ### 1. Test Cases
+
 ```markdown
 # Test Cases
 
@@ -286,6 +288,7 @@ jobs:
 ```
 
 ### 2. Test Reports
+
 ```bash
 # Generate test report
 npm run test:report
@@ -293,19 +296,3 @@ npm run test:report
 # View test report
 open test-report.html
 ```
-
-## 📚 Dokumentasi Terkait
-
-- [Local Setup](local-setup.md)
-- [Code Style Guide](code-style.md)
-- [Production Guidelines](../deployment/production.md)
-
----
-
-<div align="center">
-
-### 🔗 Navigasi
-
-[⬅️ Kembali ke Local Setup](local-setup.md) | [Lanjut ke Code Style Guide ➡️](code-style.md)
-
-</div> 

@@ -1,11 +1,4 @@
-# 💻 Development: Local Setup
-
-<div align="center">
-
-![Development](https://img.shields.io/badge/Development-Local-blue)
-![Status](https://img.shields.io/badge/Status-Active-green)
-
-</div>
+# Local Setup
 
 ## 📋 Overview
 
@@ -14,6 +7,7 @@ Dokumentasi ini menjelaskan langkah-langkah setup environment development lokal 
 ## 🛠️ Prerequisites
 
 ### 1. Required Software
+
 ```bash
 # Node.js & npm
 node -v  # Should be v14.x or higher
@@ -34,6 +28,7 @@ redis-cli --version  # Should be v6.x or higher
 ```
 
 ### 2. Development Tools
+
 ```bash
 # VS Code Extensions
 - ESLint
@@ -47,6 +42,7 @@ redis-cli --version  # Should be v6.x or higher
 ## 🚀 Setup Steps
 
 ### 1. Clone Repository
+
 ```bash
 # Clone repository
 git clone https://github.com/your-org/chatbot-stunting.git
@@ -57,6 +53,7 @@ git checkout -b development
 ```
 
 ### 2. Install Dependencies
+
 ```bash
 # Install npm dependencies
 npm install
@@ -77,6 +74,7 @@ npm install --save-dev \
 ```
 
 ### 3. Environment Setup
+
 ```bash
 # Create development environment file
 cp .env.example .env.development
@@ -86,6 +84,7 @@ nano .env.development
 ```
 
 ### 4. Database Setup
+
 ```bash
 # Start MongoDB
 mongod --dbpath /data/db
@@ -106,6 +105,7 @@ db.createCollection('sessions')
 ## 🔧 Development Tools
 
 ### 1. VS Code Configuration
+
 ```json
 // .vscode/settings.json
 {
@@ -123,6 +123,7 @@ db.createCollection('sessions')
 ```
 
 ### 2. ESLint Configuration
+
 ```javascript
 // .eslintrc.js
 module.exports = {
@@ -144,6 +145,7 @@ module.exports = {
 ```
 
 ### 3. Prettier Configuration
+
 ```json
 // .prettierrc
 {
@@ -158,6 +160,7 @@ module.exports = {
 ## 🧪 Testing Setup
 
 ### 1. Jest Configuration
+
 ```javascript
 // jest.config.js
 module.exports = {
@@ -177,6 +180,7 @@ module.exports = {
 ```
 
 ### 2. Test Database Setup
+
 ```bash
 # Create test database
 mongo
@@ -191,6 +195,7 @@ db.createCollection('sessions')
 ## 📝 Development Workflow
 
 ### 1. Start Development Server
+
 ```bash
 # Start development server with hot reload
 npm run dev
@@ -200,6 +205,7 @@ npm run dev:debug
 ```
 
 ### 2. Run Tests
+
 ```bash
 # Run all tests
 npm test
@@ -212,6 +218,7 @@ npm test -- src/__tests__/user.test.ts
 ```
 
 ### 3. Code Quality
+
 ```bash
 # Lint code
 npm run lint
@@ -226,6 +233,7 @@ npm run type-check
 ## 🔍 Debugging
 
 ### 1. VS Code Debug Configuration
+
 ```json
 // .vscode/launch.json
 {
@@ -245,6 +253,7 @@ npm run type-check
 ```
 
 ### 2. Logging
+
 ```javascript
 // src/utils/logger.ts
 import winston from 'winston';
@@ -264,19 +273,3 @@ const logger = winston.createLogger({
 
 export default logger;
 ```
-
-## 📚 Dokumentasi Terkait
-
-- [Testing Guidelines](testing.md)
-- [Code Style Guide](code-style.md)
-- [Production Guidelines](../deployment/production.md)
-
----
-
-<div align="center">
-
-### 🔗 Navigasi
-
-[⬅️ Kembali ke Production Guidelines](../deployment/production.md) | [Lanjut ke Testing Guidelines ➡️](testing.md)
-
-</div> 

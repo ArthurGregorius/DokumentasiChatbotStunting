@@ -1,11 +1,4 @@
-# 🔧 Troubleshooting: Common Issues
-
-<div align="center">
-
-![Troubleshooting](https://img.shields.io/badge/Troubleshooting-Common%20Issues-blue)
-![Status](https://img.shields.io/badge/Status-Active-green)
-
-</div>
+# Common Issues
 
 ## 📋 Overview
 
@@ -14,6 +7,7 @@ Dokumentasi ini menjelaskan masalah-masalah umum yang mungkin terjadi saat mengg
 ## 🔍 Application Issues
 
 ### 1. Server Not Starting
+
 ```bash
 # Error: Port already in use
 Error: listen EADDRINUSE: address already in use :::3000
@@ -30,6 +24,7 @@ npm start
 ```
 
 ### 2. Database Connection Issues
+
 ```bash
 # Error: MongoDB connection failed
 MongoServerError: connect ECONNREFUSED 127.0.0.1:27017
@@ -46,6 +41,7 @@ echo $MONGODB_URI
 ```
 
 ### 3. Redis Connection Issues
+
 ```bash
 # Error: Redis connection failed
 Redis connection to 127.0.0.1:6379 failed
@@ -64,6 +60,7 @@ echo $REDIS_URL
 ## 📱 WhatsApp Integration Issues
 
 ### 1. Webhook Verification Failed
+
 ```bash
 # Error: Webhook verification failed
 Error: Invalid verify token
@@ -77,6 +74,7 @@ echo $WHATSAPP_VERIFY_TOKEN
 ```
 
 ### 2. Message Sending Failed
+
 ```bash
 # Error: Message sending failed
 Error: Invalid phone number
@@ -90,6 +88,7 @@ Error: Invalid phone number
 ## 🔐 Authentication Issues
 
 ### 1. JWT Token Invalid
+
 ```bash
 # Error: Invalid token
 Error: jwt malformed
@@ -101,6 +100,7 @@ Error: jwt malformed
 ```
 
 ### 2. Rate Limiting
+
 ```bash
 # Error: Too many requests
 Error: Rate limit exceeded
@@ -114,6 +114,7 @@ Error: Rate limit exceeded
 ## 💾 Database Issues
 
 ### 1. Data Not Saving
+
 ```bash
 # Error: Validation failed
 Error: ValidationError: User validation failed
@@ -125,6 +126,7 @@ Error: ValidationError: User validation failed
 ```
 
 ### 2. Slow Queries
+
 ```bash
 # Issue: Slow database queries
 
@@ -139,6 +141,7 @@ db.collection.createIndex({ field: 1 })
 ## 📊 Performance Issues
 
 ### 1. High Memory Usage
+
 ```bash
 # Issue: High memory consumption
 
@@ -151,6 +154,7 @@ pm2 monit
 ```
 
 ### 2. Slow Response Time
+
 ```bash
 # Issue: Slow API responses
 
@@ -163,6 +167,7 @@ pm2 monit
 ## 🔄 Deployment Issues
 
 ### 1. Docker Container Issues
+
 ```bash
 # Error: Container not starting
 Error: Container failed to start
@@ -176,6 +181,7 @@ docker logs <container_id>
 ```
 
 ### 2. Nginx Configuration
+
 ```bash
 # Error: Nginx configuration error
 Error: nginx: [emerg] invalid number of arguments
@@ -191,6 +197,7 @@ nginx -t
 ## 📝 Logging Issues
 
 ### 1. Log Files Not Created
+
 ```bash
 # Issue: Log files not being created
 
@@ -203,6 +210,7 @@ sudo chown -R app:app /var/log/app
 ```
 
 ### 2. Log Rotation
+
 ```bash
 # Issue: Log files too large
 
@@ -219,19 +227,3 @@ sudo chown -R app:app /var/log/app
     create 0640 app app
 }
 ```
-
-## 📚 Dokumentasi Terkait
-
-- [FAQ](faq.md)
-- [Production Guidelines](../deployment/production.md)
-- [Local Setup](../development/local-setup.md)
-
----
-
-<div align="center">
-
-### 🔗 Navigasi
-
-[⬅️ Kembali ke Production Guidelines](../deployment/production.md) | [Lanjut ke FAQ ➡️](faq.md)
-
-</div> 

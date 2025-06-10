@@ -1,12 +1,11 @@
-# 🔌 API Documentation
+---
+icon: laptop
+cover: >-
+  https://images.unsplash.com/photo-1557672172-298e090bd0f1?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwxMHx8YWJzdHJhY3R8ZW58MHx8fHwxNzQ5NTQ3MDYyfDA&ixlib=rb-4.1.0&q=85
+coverY: 0
+---
 
-<div align="center">
-
-![API](https://img.shields.io/badge/API-Documentation-blue)
-![Version](https://img.shields.io/badge/Version-1.0.0-green)
-![Status](https://img.shields.io/badge/Status-Active-green)
-
-</div>
+# API Documentation
 
 ## 📋 Overview
 
@@ -15,27 +14,34 @@ Dokumentasi API untuk Chatbot Identifikasi Stunting. API ini digunakan untuk kom
 ## 🔑 Authentication
 
 ### API Key
+
 Semua request harus menyertakan API key dalam header:
+
 ```http
 Authorization: Bearer {API_KEY}
 ```
 
 ### Rate Limiting
-- 100 requests per minute per API key
-- Rate limit headers included in response:
-  ```http
-  X-RateLimit-Limit: 100
-  X-RateLimit-Remaining: 99
-  X-RateLimit-Reset: 1616234400
-  ```
+
+* 100 requests per minute per API key
+*   Rate limit headers included in response:
+
+    ```http
+    X-RateLimit-Limit: 100
+    X-RateLimit-Remaining: 99
+    X-RateLimit-Reset: 1616234400
+    ```
 
 ## 📡 Endpoints
 
 ### User Management
+
 <details>
+
 <summary>🔍 User Endpoints</summary>
 
-#### Register User
+**Register User**
+
 ```http
 POST /api/users/register
 Content-Type: application/json
@@ -48,17 +54,22 @@ Content-Type: application/json
 }
 ```
 
-#### Get User
+**Get User**
+
 ```http
 GET /api/users/{phone}
 ```
+
 </details>
 
 ### Child Management
+
 <details>
+
 <summary>🔍 Child Endpoints</summary>
 
-#### Register Child
+**Register Child**
+
 ```http
 POST /api/children
 Content-Type: application/json
@@ -74,17 +85,22 @@ Content-Type: application/json
 }
 ```
 
-#### Get Child
+**Get Child**
+
 ```http
 GET /api/children/{childId}
 ```
+
 </details>
 
 ### Questionnaire
+
 <details>
+
 <summary>🔍 Questionnaire Endpoints</summary>
 
-#### Submit Questionnaire
+**Submit Questionnaire**
+
 ```http
 POST /api/questionnaires
 Content-Type: application/json
@@ -101,15 +117,18 @@ Content-Type: application/json
 }
 ```
 
-#### Get Results
+**Get Results**
+
 ```http
 GET /api/questionnaires/{childId}
 ```
+
 </details>
 
 ## 📊 Response Format
 
 ### Success Response
+
 ```json
 {
   "status": "success",
@@ -120,6 +139,7 @@ GET /api/questionnaires/{childId}
 ```
 
 ### Error Response
+
 ```json
 {
   "status": "error",
@@ -131,32 +151,36 @@ GET /api/questionnaires/{childId}
 ## 🔒 Security
 
 ### 1. Authentication
-- API Key Authentication
-- JWT for Web Interface
-- OAuth2 for Google Services
+
+* API Key Authentication
+* JWT for Web Interface
+* OAuth2 for Google Services
 
 ### 2. Authorization
-- Role-based Access Control
-- Resource-based Permissions
-- API Rate Limiting
+
+* Role-based Access Control
+* Resource-based Permissions
+* API Rate Limiting
 
 ### 3. Data Security
-- End-to-end Encryption
-- Data Encryption at Rest
-- Secure Communication (HTTPS)
+
+* End-to-end Encryption
+* Data Encryption at Rest
+* Secure Communication (HTTPS)
 
 ## 📝 Error Codes
 
-| Code | Description | Solution |
-|------|-------------|----------|
-| AUTH_001 | Invalid API key | Check API key |
-| AUTH_002 | Expired token | Refresh token |
-| VAL_001 | Invalid input | Check request body |
-| DB_001 | Database error | Check logs |
+| Code      | Description     | Solution           |
+| --------- | --------------- | ------------------ |
+| AUTH\_001 | Invalid API key | Check API key      |
+| AUTH\_002 | Expired token   | Refresh token      |
+| VAL\_001  | Invalid input   | Check request body |
+| DB\_001   | Database error  | Check logs         |
 
 ## 🔄 Webhooks
 
 ### 1. WhatsApp Webhook
+
 ```http
 POST /webhook/whatsapp
 Content-Type: application/json
@@ -170,6 +194,7 @@ Content-Type: application/json
 ```
 
 ### 2. Payment Webhook
+
 ```http
 POST /webhook/payment
 Content-Type: application/json
@@ -181,20 +206,3 @@ Content-Type: application/json
   }
 }
 ```
-
-## 📚 Dokumentasi Terkait
-
-- [Authentication](authentication.md)
-- [Endpoints](endpoints.md)
-- [Error Handling](error-handling.md)
-- [Webhooks](webhooks.md)
-
----
-
-<div align="center">
-
-### 🔗 Navigasi
-
-[⬅️ Kembali ke Features](../features/README.md) | [Lanjut ke Implementation ➡️](../implementation/README.md)
-
-</div> 

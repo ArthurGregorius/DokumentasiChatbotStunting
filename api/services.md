@@ -1,11 +1,4 @@
-# 🛠️ API Services
-
-<div align="center">
-
-![API Services](https://img.shields.io/badge/API-Services-blue)
-![Status](https://img.shields.io/badge/Status-Active-green)
-
-</div>
+# Services
 
 ## 📋 Overview
 
@@ -14,6 +7,7 @@ Dokumentasi ini menjelaskan service-service yang digunakan dalam API Chatbot Ide
 ## 👤 User Service
 
 ### Create User
+
 ```javascript
 // services/userService.js
 const createUser = async (userData) => {
@@ -42,6 +36,7 @@ const createUser = async (userData) => {
 ```
 
 ### Get User
+
 ```javascript
 const getUserByPhone = async (phone) => {
   try {
@@ -60,6 +55,7 @@ const getUserByPhone = async (phone) => {
 ## 👶 Child Service
 
 ### Create Child
+
 ```javascript
 // services/childService.js
 const createChild = async (childData) => {
@@ -88,6 +84,7 @@ const createChild = async (childData) => {
 ```
 
 ### Get Child
+
 ```javascript
 const getChildById = async (childId) => {
   try {
@@ -106,6 +103,7 @@ const getChildById = async (childId) => {
 ## 📝 Questionnaire Service
 
 ### Submit Questionnaire
+
 ```javascript
 // services/questionnaireService.js
 const submitQuestionnaire = async (questionnaireData) => {
@@ -139,6 +137,7 @@ const submitQuestionnaire = async (questionnaireData) => {
 ```
 
 ### Get Results
+
 ```javascript
 const getResultsByChildId = async (childId) => {
   try {
@@ -159,6 +158,7 @@ const getResultsByChildId = async (childId) => {
 ## 💬 Message Service
 
 ### Send Message
+
 ```javascript
 // services/messageService.js
 const sendMessage = async (messageData) => {
@@ -196,6 +196,7 @@ const sendMessage = async (messageData) => {
 ```
 
 ### Get Message History
+
 ```javascript
 const getMessageHistory = async (phone, options) => {
   try {
@@ -214,6 +215,7 @@ const getMessageHistory = async (phone, options) => {
 ## 🔄 Session Service
 
 ### Create Session
+
 ```javascript
 // services/sessionService.js
 const createSession = async (sessionData) => {
@@ -248,6 +250,7 @@ const createSession = async (sessionData) => {
 ```
 
 ### End Session
+
 ```javascript
 const endSession = async (sessionId) => {
   try {
@@ -269,6 +272,7 @@ const endSession = async (sessionId) => {
 ## 📱 WhatsApp Service
 
 ### Send Message
+
 ```javascript
 // services/whatsappService.js
 const sendMessage = async (phone, message) => {
@@ -300,6 +304,7 @@ const sendMessage = async (phone, message) => {
 ```
 
 ### Handle Webhook
+
 ```javascript
 const handleWebhook = async (webhookData) => {
   try {
@@ -327,20 +332,3 @@ const handleWebhook = async (webhookData) => {
   }
 };
 ```
-
-## 📚 Dokumentasi Terkait
-
-- [API Overview](README.md)
-- [Controllers](controllers.md)
-- [Models](models.md)
-- [Configuration](configuration.md)
-
----
-
-<div align="center">
-
-### 🔗 Navigasi
-
-[⬅️ Kembali ke Models](models.md) | [Lanjut ke Routes ➡️](routes.md)
-
-</div> 

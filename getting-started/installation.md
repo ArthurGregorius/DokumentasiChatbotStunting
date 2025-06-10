@@ -5,7 +5,7 @@ Berikut adalah panduan langkah demi langkah untuk menginstal Chatbot Identifikas
 ## 1. Clone Repository
 
 ```bash
-git clone [repository-url]
+git clone https://github.com/ArthurGregorius/ChatbotStunting.git
 cd ChatbotStunting
 ```
 
@@ -95,24 +95,22 @@ docker run -d --name chatbot-stunting -p 3000:3000 chatbot-stunting
 ### Masalah Umum
 
 1. **Error Koneksi WhatsApp**
-   - Pastikan nomor WhatsApp valid
-   - Periksa koneksi internet
-   - Restart aplikasi
-
+   * Pastikan nomor WhatsApp valid
+   * Periksa koneksi internet
+   * Restart aplikasi
 2. **Error Database**
-   - Periksa kredensial database
-   - Pastikan database server berjalan
-   - Periksa firewall settings
-
+   * Periksa kredensial database
+   * Pastikan database server berjalan
+   * Periksa firewall settings
 3. **Error API**
-   - Verifikasi API key
-   - Periksa URL endpoint
-   - Pastikan server API berjalan
+   * Verifikasi API key
+   * Periksa URL endpoint
+   * Pastikan server API berjalan
 
 ### Logging
 
-- Log aplikasi tersedia di `logs/app.log`
-- Log error tersedia di `logs/error.log`
+* Log aplikasi tersedia di `logs/app.log`
+* Log error tersedia di `logs/error.log`
 
 ## Next Steps
 
@@ -129,4 +127,4 @@ Jika mengalami masalah saat instalasi, silakan:
 
 1. Periksa dokumentasi troubleshooting
 2. Hubungi tim support
-3. Buat issue di repository 
+3. Buat issue di repository

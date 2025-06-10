@@ -1,11 +1,4 @@
-# 🛠️ Implementation: Utilities
-
-<div align="center">
-
-![Implementation](https://img.shields.io/badge/Implementation-Utilities-blue)
-![Status](https://img.shields.io/badge/Status-Active-green)
-
-</div>
+# Utils & Helpers
 
 ## 📋 Overview
 
@@ -14,6 +7,7 @@ Dokumentasi ini menjelaskan utility functions dan helpers yang digunakan dalam C
 ## 🔍 Validation Utils
 
 ### 1. Input Validation
+
 ```typescript
 // src/utils/validation.ts
 import { z } from 'zod';
@@ -49,6 +43,7 @@ export const validateInput = <T>(schema: z.Schema<T>, data: unknown): T => {
 ```
 
 ### 2. Error Handling
+
 ```typescript
 // src/utils/errors.ts
 export class ValidationError extends Error {
@@ -105,6 +100,7 @@ export const handleError = (error: Error) => {
 ## 📊 Formatting Utils
 
 ### 1. Date Formatting
+
 ```typescript
 // src/utils/date.ts
 import { format, parseISO } from 'date-fns';
@@ -134,6 +130,7 @@ export const formatAge = (birthDate: Date | string): string => {
 ```
 
 ### 2. Number Formatting
+
 ```typescript
 // src/utils/number.ts
 export const formatNumber = (num: number): string => {
@@ -159,6 +156,7 @@ export const formatPercentage = (value: number): string => {
 ## 🔄 Helper Functions
 
 ### 1. WhatsApp Message Helpers
+
 ```typescript
 // src/utils/whatsapp.ts
 export const formatWhatsAppMessage = (template: string, params: Record<string, string>): string => {
@@ -179,6 +177,7 @@ export const validateWhatsAppNumber = (phone: string): boolean => {
 ```
 
 ### 2. Cache Helpers
+
 ```typescript
 // src/utils/cache.ts
 import { Redis } from 'ioredis';
@@ -213,6 +212,7 @@ export class CacheManager {
 ## 📝 Logger Utils
 
 ### 1. Winston Logger
+
 ```typescript
 // src/utils/logger.ts
 import winston from 'winston';
@@ -251,6 +251,7 @@ export default logger;
 ```
 
 ### 2. Request Logger
+
 ```typescript
 // src/utils/request-logger.ts
 import { Request, Response, NextFunction } from 'express';
@@ -277,17 +278,16 @@ export const requestLogger = (req: Request, res: Response, next: NextFunction): 
 
 ## 📚 Dokumentasi Terkait
 
-- [Controllers](controllers.md)
-- [Services](services.md)
-- [Models](models.md)
+* [Controllers](controllers.md)
+* [Services](services.md)
+* [Models](models.md)
 
----
+***
 
-<div align="center">
+#### 🔗 Navigasi
 
-### 🔗 Navigasi
+#### User Input Validator
 
-### User Input Validator
 ```javascript
 // utils/validators.js
 const validateUserInput = (data) => {
@@ -320,7 +320,8 @@ const validateUserInput = (data) => {
 };
 ```
 
-### Child Input Validator
+#### Child Input Validator
+
 ```javascript
 const validateChildInput = (data) => {
   const errors = [];
@@ -360,7 +361,8 @@ const validateChildInput = (data) => {
 };
 ```
 
-### Questionnaire Input Validator
+#### Questionnaire Input Validator
+
 ```javascript
 const validateQuestionnaireInput = (data) => {
   const errors = [];
@@ -391,9 +393,10 @@ const validateQuestionnaireInput = (data) => {
 };
 ```
 
-## ⚠️ Error Handling
+### ⚠️ Error Handling
 
-### Custom Error Classes
+#### Custom Error Classes
+
 ```javascript
 // utils/errors.js
 class ValidationError extends Error {
@@ -429,7 +432,8 @@ class UnauthorizedError extends Error {
 }
 ```
 
-### Error Handler
+#### Error Handler
+
 ```javascript
 // utils/errorHandler.js
 const handleError = (error, res) => {
@@ -475,9 +479,10 @@ const handleError = (error, res) => {
 };
 ```
 
-## 🔄 Cache Helpers
+### 🔄 Cache Helpers
 
-### Redis Cache Helper
+#### Redis Cache Helper
+
 ```javascript
 // utils/cache.js
 const Redis = require('ioredis');
@@ -518,9 +523,10 @@ const cache = {
 };
 ```
 
-## 📊 Logger
+### 📊 Logger
 
-### Winston Logger
+#### Winston Logger
+
 ```javascript
 // utils/logger.js
 const winston = require('winston');
@@ -550,9 +556,10 @@ if (config.env !== 'production') {
 }
 ```
 
-## 🔐 Security Helpers
+### 🔐 Security Helpers
 
-### JWT Helper
+#### JWT Helper
+
 ```javascript
 // utils/jwt.js
 const jwt = require('jsonwebtoken');
@@ -575,7 +582,8 @@ const jwtHelper = {
 };
 ```
 
-### Password Helper
+#### Password Helper
+
 ```javascript
 // utils/password.js
 const bcrypt = require('bcrypt');
@@ -592,9 +600,10 @@ const passwordHelper = {
 };
 ```
 
-## 📱 WhatsApp Helpers
+### 📱 WhatsApp Helpers
 
-### Message Formatter
+#### Message Formatter
+
 ```javascript
 // utils/whatsapp.js
 const formatMessage = (type, data) => {
@@ -625,19 +634,3 @@ const formatMessage = (type, data) => {
   }
 };
 ```
-
-## 📚 Dokumentasi Terkait
-
-- [Controllers](controllers.md)
-- [Services](services.md)
-- [Models](models.md)
-
----
-
-<div align="center">
-
-### 🔗 Navigasi
-
-[⬅️ Kembali ke Models](models.md) | [Lanjut ke Local Setup ➡️](../development/local-setup.md)
-
-</div> 

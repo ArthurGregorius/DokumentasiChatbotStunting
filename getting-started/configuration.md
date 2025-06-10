@@ -1,11 +1,4 @@
-# ⚙️ Configuration Guide
-
-<div align="center">
-
-![Configuration](https://img.shields.io/badge/Configuration-Guide-blue)
-![Status](https://img.shields.io/badge/Status-Active-green)
-
-</div>
+# Configuration
 
 ## 📋 Overview
 
@@ -14,6 +7,7 @@ Panduan ini menjelaskan cara mengkonfigurasi Chatbot Identifikasi Stunting untuk
 ## 🔧 Environment Variables
 
 ### Server Configuration
+
 ```env
 # Server
 PORT=3000
@@ -40,12 +34,14 @@ DB_NAME=chatbot_stunting
 ## 📱 WhatsApp Configuration
 
 ### 1. Setup WhatsApp Business API
+
 1. Daftar di [WhatsApp Business API](https://business.whatsapp.com)
 2. Verifikasi nomor telepon
 3. Dapatkan API key
 4. Konfigurasi webhook
 
 ### 2. Webhook Configuration
+
 ```javascript
 // webhook.js
 app.post('/webhook', (req, res) => {
@@ -66,12 +62,14 @@ app.post('/webhook', (req, res) => {
 ## 📊 Google Apps Script Setup
 
 ### 1. Create Project
+
 1. Buka [Google Apps Script](https://script.google.com)
 2. Buat project baru
 3. Copy script dari `AppScript.gs`
 4. Deploy sebagai web app
 
 ### 2. Configure Permissions
+
 ```javascript
 // Set permissions
 function doGet(e) {
@@ -86,6 +84,7 @@ function doPost(e) {
 ## 🔒 Security Configuration
 
 ### 1. API Authentication
+
 ```javascript
 // middleware/auth.js
 const authMiddleware = (req, res, next) => {
@@ -100,6 +99,7 @@ const authMiddleware = (req, res, next) => {
 ```
 
 ### 2. Rate Limiting
+
 ```javascript
 // middleware/rateLimit.js
 const rateLimit = require('express-rate-limit');
@@ -115,6 +115,7 @@ app.use(limiter);
 ## 📝 Logging Configuration
 
 ### 1. Winston Logger
+
 ```javascript
 // utils/logger.js
 const winston = require('winston');
@@ -130,6 +131,7 @@ const logger = winston.createLogger({
 ```
 
 ### 2. Error Handling
+
 ```javascript
 // middleware/errorHandler.js
 const errorHandler = (err, req, res, next) => {
@@ -147,6 +149,7 @@ const errorHandler = (err, req, res, next) => {
 ## 🔄 Database Configuration
 
 ### 1. Connection Setup
+
 ```javascript
 // config/database.js
 const { Pool } = require('pg');
@@ -161,6 +164,7 @@ const pool = new Pool({
 ```
 
 ### 2. Migration Setup
+
 ```javascript
 // migrations/001_initial.js
 exports.up = function(knex) {
@@ -173,19 +177,3 @@ exports.up = function(knex) {
     });
 };
 ```
-
-## 📚 Dokumentasi Terkait
-
-- [Environment Variables](../deployment/environment.md)
-- [Security Best Practices](../security/best-practices.md)
-- [Database Setup](../database/setup.md)
-
----
-
-<div align="center">
-
-### 🔗 Navigasi
-
-[⬅️ Kembali ke Getting Started](README.md) | [Lanjut ke Architecture ➡️](../architecture/README.md)
-
-</div> 

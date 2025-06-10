@@ -1,11 +1,4 @@
-# ⚙️ API Configuration
-
-<div align="center">
-
-![API Configuration](https://img.shields.io/badge/API-Configuration-blue)
-![Status](https://img.shields.io/badge/Status-Active-green)
-
-</div>
+# Configuration
 
 ## 📋 Overview
 
@@ -14,6 +7,7 @@ Dokumentasi ini menjelaskan konfigurasi API untuk Chatbot Identifikasi Stunting,
 ## 🔧 Server Configuration
 
 ### Basic Configuration
+
 ```javascript
 // config/server.js
 module.exports = {
@@ -28,6 +22,7 @@ module.exports = {
 ```
 
 ### Express Configuration
+
 ```javascript
 // app.js
 const express = require('express');
@@ -41,6 +36,7 @@ app.use(cors(config.cors));
 ## 🔒 Security Configuration
 
 ### JWT Configuration
+
 ```javascript
 // config/jwt.js
 module.exports = {
@@ -51,6 +47,7 @@ module.exports = {
 ```
 
 ### Rate Limiting
+
 ```javascript
 // config/rateLimit.js
 module.exports = {
@@ -63,6 +60,7 @@ module.exports = {
 ## 📡 WhatsApp Integration
 
 ### WhatsApp API Configuration
+
 ```javascript
 // config/whatsapp.js
 module.exports = {
@@ -74,6 +72,7 @@ module.exports = {
 ```
 
 ### Webhook Configuration
+
 ```javascript
 // config/webhook.js
 module.exports = {
@@ -86,6 +85,7 @@ module.exports = {
 ## 📊 Database Configuration
 
 ### PostgreSQL Configuration
+
 ```javascript
 // config/database.js
 module.exports = {
@@ -105,6 +105,7 @@ module.exports = {
 ```
 
 ### Redis Configuration
+
 ```javascript
 // config/redis.js
 module.exports = {
@@ -118,6 +119,7 @@ module.exports = {
 ## 📝 Logging Configuration
 
 ### Winston Logger Configuration
+
 ```javascript
 // config/logger.js
 module.exports = {
@@ -136,6 +138,7 @@ module.exports = {
 ## 🔄 Cache Configuration
 
 ### Redis Cache Configuration
+
 ```javascript
 // config/cache.js
 module.exports = {
@@ -148,6 +151,7 @@ module.exports = {
 ## 📱 Google Apps Script Configuration
 
 ### Google Apps Script Settings
+
 ```javascript
 // config/gscript.js
 module.exports = {
@@ -156,20 +160,3 @@ module.exports = {
   spreadsheetId: process.env.SPREADSHEET_ID
 };
 ```
-
-## 📚 Dokumentasi Terkait
-
-- [API Overview](README.md)
-- [Controllers](controllers.md)
-- [Models](models.md)
-- [Services](services.md)
-
----
-
-<div align="center">
-
-### 🔗 Navigasi
-
-[⬅️ Kembali ke API Overview](README.md) | [Lanjut ke Controllers ➡️](controllers.md)
-
-</div> 

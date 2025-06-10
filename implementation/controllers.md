@@ -1,11 +1,4 @@
-# 🎮 Implementation: Controllers
-
-<div align="center">
-
-![Implementation](https://img.shields.io/badge/Implementation-Controllers-blue)
-![Status](https://img.shields.io/badge/Status-Active-green)
-
-</div>
+# Controllers
 
 ## 📋 Overview
 
@@ -14,6 +7,7 @@ Dokumentasi ini menjelaskan implementasi detail dari controller-controller yang 
 ## 👤 User Controller Implementation
 
 ### Register User
+
 ```javascript
 // controllers/userController.js
 const { validateUserInput } = require('../utils/validators');
@@ -63,6 +57,7 @@ const registerUser = async (req, res) => {
 ```
 
 ### Get User Profile
+
 ```javascript
 const getUserProfile = async (req, res) => {
   try {
@@ -105,6 +100,7 @@ const getUserProfile = async (req, res) => {
 ## 👶 Child Controller Implementation
 
 ### Register Child
+
 ```javascript
 // controllers/childController.js
 const { validateChildInput } = require('../utils/validators');
@@ -157,6 +153,7 @@ const registerChild = async (req, res) => {
 ```
 
 ### Get Child Data
+
 ```javascript
 const getChildData = async (req, res) => {
   try {
@@ -199,6 +196,7 @@ const getChildData = async (req, res) => {
 ## 📝 Questionnaire Controller Implementation
 
 ### Submit Questionnaire
+
 ```javascript
 // controllers/questionnaireController.js
 const { validateQuestionnaireInput } = require('../utils/validators');
@@ -247,6 +245,7 @@ const submitQuestionnaire = async (req, res) => {
 ```
 
 ### Get Questionnaire Results
+
 ```javascript
 const getQuestionnaireResults = async (req, res) => {
   try {
@@ -276,6 +275,7 @@ const getQuestionnaireResults = async (req, res) => {
 ## 💬 Message Controller Implementation
 
 ### Send Message
+
 ```javascript
 // controllers/messageController.js
 const { validateMessageInput } = require('../utils/validators');
@@ -314,6 +314,7 @@ const sendMessage = async (req, res) => {
 ```
 
 ### Get Message History
+
 ```javascript
 const getMessageHistory = async (req, res) => {
   try {
@@ -347,6 +348,7 @@ const getMessageHistory = async (req, res) => {
 ## 🔄 Session Controller Implementation
 
 ### Create Session
+
 ```javascript
 // controllers/sessionController.js
 const { validateSessionInput } = require('../utils/validators');
@@ -394,6 +396,7 @@ const createSession = async (req, res) => {
 ```
 
 ### End Session
+
 ```javascript
 const endSession = async (req, res) => {
   try {
@@ -419,20 +422,3 @@ const endSession = async (req, res) => {
   }
 };
 ```
-
-## 📚 Dokumentasi Terkait
-
-- [API Controllers](../api/controllers.md)
-- [Services](services.md)
-- [Models](models.md)
-- [Utils](utils.md)
-
----
-
-<div align="center">
-
-### 🔗 Navigasi
-
-[⬅️ Kembali ke Technical Implementation](../technical-implementation/README.md) | [Lanjut ke Services ➡️](services.md)
-
-</div> 

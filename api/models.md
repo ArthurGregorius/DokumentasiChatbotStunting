@@ -1,11 +1,4 @@
-# 📦 API Models
-
-<div align="center">
-
-![API Models](https://img.shields.io/badge/API-Models-blue)
-![Status](https://img.shields.io/badge/Status-Active-green)
-
-</div>
+# Models
 
 ## 📋 Overview
 
@@ -14,6 +7,7 @@ Dokumentasi ini menjelaskan model-model data yang digunakan dalam API Chatbot Id
 ## 👤 User Model
 
 ### Schema Definition
+
 ```javascript
 // models/User.js
 const userSchema = new Schema({
@@ -49,6 +43,7 @@ const userSchema = new Schema({
 ```
 
 ### Methods
+
 ```javascript
 userSchema.methods = {
   async updateProfile(data) {
@@ -66,6 +61,7 @@ userSchema.methods = {
 ## 👶 Child Model
 
 ### Schema Definition
+
 ```javascript
 // models/Child.js
 const childSchema = new Schema({
@@ -112,6 +108,7 @@ const childSchema = new Schema({
 ```
 
 ### Methods
+
 ```javascript
 childSchema.methods = {
   async updateMeasurements(data) {
@@ -129,6 +126,7 @@ childSchema.methods = {
 ## 📝 Questionnaire Model
 
 ### Schema Definition
+
 ```javascript
 // models/Questionnaire.js
 const questionnaireSchema = new Schema({
@@ -172,6 +170,7 @@ const questionnaireSchema = new Schema({
 ```
 
 ### Methods
+
 ```javascript
 questionnaireSchema.methods = {
   calculateScore() {
@@ -199,6 +198,7 @@ questionnaireSchema.methods = {
 ## 💬 Message Model
 
 ### Schema Definition
+
 ```javascript
 // models/Message.js
 const messageSchema = new Schema({
@@ -234,6 +234,7 @@ const messageSchema = new Schema({
 ```
 
 ### Methods
+
 ```javascript
 messageSchema.methods = {
   async updateStatus(status) {
@@ -253,6 +254,7 @@ messageSchema.methods = {
 ## 🔄 Session Model
 
 ### Schema Definition
+
 ```javascript
 // models/Session.js
 const sessionSchema = new Schema({
@@ -286,6 +288,7 @@ const sessionSchema = new Schema({
 ```
 
 ### Methods
+
 ```javascript
 sessionSchema.methods = {
   async updateState(state, data = {}) {
@@ -304,20 +307,3 @@ sessionSchema.methods = {
   }
 };
 ```
-
-## 📚 Dokumentasi Terkait
-
-- [API Overview](README.md)
-- [Controllers](controllers.md)
-- [Services](services.md)
-- [Configuration](configuration.md)
-
----
-
-<div align="center">
-
-### 🔗 Navigasi
-
-[⬅️ Kembali ke Controllers](controllers.md) | [Lanjut ke Services ➡️](services.md)
-
-</div> 

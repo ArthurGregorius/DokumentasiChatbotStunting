@@ -1,11 +1,4 @@
-# 🌍 Deployment: Environment Configuration
-
-<div align="center">
-
-![Deployment](https://img.shields.io/badge/Deployment-Environment-blue)
-![Status](https://img.shields.io/badge/Status-Active-green)
-
-</div>
+# Environment Configuration
 
 ## 📋 Overview
 
@@ -14,6 +7,7 @@ Dokumentasi ini menjelaskan konfigurasi environment untuk deployment Chatbot Ide
 ## 🔧 Environment Variables
 
 ### 1. Server Configuration
+
 ```env
 # Server
 PORT=3000
@@ -29,6 +23,7 @@ RATE_LIMIT_MAX=100
 ```
 
 ### 2. Database Configuration
+
 ```env
 # MongoDB
 MONGODB_URI=mongodb://localhost:27017/chatbot-stunting
@@ -41,6 +36,7 @@ REDIS_PASSWORD=secure-password
 ```
 
 ### 3. WhatsApp Integration
+
 ```env
 # WhatsApp Business API
 WHATSAPP_API_URL=https://graph.facebook.com/v13.0
@@ -50,6 +46,7 @@ WHATSAPP_VERIFY_TOKEN=your-verify-token
 ```
 
 ### 4. Google Apps Script
+
 ```env
 # Google Apps Script
 GOOGLE_APPS_SCRIPT_URL=your-script-url
@@ -57,6 +54,7 @@ GOOGLE_APPS_SCRIPT_KEY=your-script-key
 ```
 
 ### 5. Logging
+
 ```env
 # Winston Logger
 LOG_LEVEL=info
@@ -66,6 +64,7 @@ LOG_FILE_PATH=logs/app.log
 ## 🛠️ Environment Setup
 
 ### 1. Development Environment
+
 ```bash
 # Create .env file
 cp .env.example .env
@@ -78,6 +77,7 @@ npm run dev
 ```
 
 ### 2. Production Environment
+
 ```bash
 # Create production .env file
 cp .env.example .env.production
@@ -92,6 +92,7 @@ npm start
 ## 🔐 Security Configuration
 
 ### 1. SSL/TLS Setup
+
 ```nginx
 # nginx.conf
 server {
@@ -110,6 +111,7 @@ server {
 ```
 
 ### 2. CORS Configuration
+
 ```javascript
 // cors.config.js
 module.exports = {
@@ -124,6 +126,7 @@ module.exports = {
 ## 📊 Monitoring Configuration
 
 ### 1. Winston Logger Setup
+
 ```javascript
 // logger.config.js
 const winston = require('winston');
@@ -146,6 +149,7 @@ module.exports = winston.createLogger({
 ```
 
 ### 2. Health Check Endpoint
+
 ```javascript
 // health.js
 app.get('/health', (req, res) => {
@@ -162,6 +166,7 @@ app.get('/health', (req, res) => {
 ## 🔄 CI/CD Environment
 
 ### 1. GitHub Actions Secrets
+
 ```yaml
 # Required secrets
 DOCKERHUB_USERNAME: your-dockerhub-username
@@ -171,6 +176,7 @@ AWS_SECRET_ACCESS_KEY: your-aws-secret-key
 ```
 
 ### 2. Deployment Environment
+
 ```yaml
 # deployment.env
 NODE_ENV=production
@@ -178,19 +184,3 @@ PORT=3000
 MONGODB_URI=mongodb://mongodb:27017/chatbot-stunting
 REDIS_URL=redis://redis:6379
 ```
-
-## 📚 Dokumentasi Terkait
-
-- [Docker Setup](docker.md)
-- [Production Guidelines](production.md)
-- [Local Setup](../development/local-setup.md)
-
----
-
-<div align="center">
-
-### 🔗 Navigasi
-
-[⬅️ Kembali ke Docker Setup](docker.md) | [Lanjut ke Production Guidelines ➡️](production.md)
-
-</div> 

@@ -1,11 +1,11 @@
-# 🛠️ Technical Implementation
+---
+icon: webhook
+cover: >-
+  https://images.unsplash.com/photo-1604079628040-94301bb21b91?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHw2fHxhYnN0cmFjdHxlbnwwfHx8fDE3NDk1NDcwNjJ8MA&ixlib=rb-4.1.0&q=85
+coverY: 0
+---
 
-<div align="center">
-
-![Implementation](https://img.shields.io/badge/Implementation-Detailed-blue)
-![Status](https://img.shields.io/badge/Status-Complete-green)
-
-</div>
+# Technical Implementation
 
 ## 📋 Overview
 
@@ -14,28 +14,32 @@ Bagian ini menjelaskan implementasi teknis dari Chatbot Identifikasi Stunting, t
 ## 🏗️ Komponen Utama
 
 ### Controllers
-- Menangani logika bisnis utama
-- Memproses request dari WhatsApp
-- Mengelola interaksi dengan services
-- Validasi input dan output
+
+* Menangani logika bisnis utama
+* Memproses request dari WhatsApp
+* Mengelola interaksi dengan services
+* Validasi input dan output
 
 ### Services
-- Implementasi logika bisnis
-- Integrasi dengan Google Apps Script
-- Pemrosesan data dan kalkulasi
-- Manajemen state dan session
+
+* Implementasi logika bisnis
+* Integrasi dengan Google Apps Script
+* Pemrosesan data dan kalkulasi
+* Manajemen state dan session
 
 ### Models
-- Definisi struktur data
-- Validasi data
-- Relasi antar entitas
-- Transformasi data
+
+* Definisi struktur data
+* Validasi data
+* Relasi antar entitas
+* Transformasi data
 
 ### Utils & Helpers
-- Fungsi utilitas umum
-- Helper untuk format data
-- Konstanta dan konfigurasi
-- Error handling
+
+* Fungsi utilitas umum
+* Helper untuk format data
+* Konstanta dan konfigurasi
+* Error handling
 
 ## 🔄 Alur Kerja
 
@@ -74,7 +78,9 @@ src/
 ## 🔍 Detail Implementasi
 
 ### Controllers
+
 <details>
+
 <summary>📝 User Controller</summary>
 
 ```javascript
@@ -88,10 +94,13 @@ class UserController {
   }
 }
 ```
+
 </details>
 
 ### Services
+
 <details>
+
 <summary>📝 User Service</summary>
 
 ```javascript
@@ -105,10 +114,13 @@ class UserService {
   }
 }
 ```
+
 </details>
 
 ### Models
+
 <details>
+
 <summary>📝 User Model</summary>
 
 ```javascript
@@ -120,43 +132,24 @@ class User {
   }
 }
 ```
+
 </details>
 
 ## 🎯 Best Practices
 
 1. **Code Organization**
-   - Gunakan struktur modular
-   - Pisahkan concerns
-   - Gunakan design patterns yang sesuai
-
+   * Gunakan struktur modular
+   * Pisahkan concerns
+   * Gunakan design patterns yang sesuai
 2. **Error Handling**
-   - Implementasi try-catch
-   - Logging yang proper
-   - Error response yang konsisten
-
+   * Implementasi try-catch
+   * Logging yang proper
+   * Error response yang konsisten
 3. **Performance**
-   - Optimasi query
-   - Caching jika diperlukan
-   - Async/await untuk operasi I/O
-
+   * Optimasi query
+   * Caching jika diperlukan
+   * Async/await untuk operasi I/O
 4. **Security**
-   - Validasi input
-   - Sanitasi data
-   - Rate limiting
-
-## 📚 Dokumentasi Terkait
-
-- [Controllers](controllers.md)
-- [Services](services.md)
-- [Models](models.md)
-- [Utils & Helpers](utils.md)
-
----
-
-<div align="center">
-
-### 🔗 Navigasi
-
-[⬅️ Kembali ke Dokumentasi Utama](../README.md) | [Lanjut ke Development ➡️](../development/README.md)
-
-</div> 
+   * Validasi input
+   * Sanitasi data
+   * Rate limiting

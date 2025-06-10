@@ -1,11 +1,4 @@
-# 🛠️ Implementation: Services
-
-<div align="center">
-
-![Implementation](https://img.shields.io/badge/Implementation-Services-blue)
-![Status](https://img.shields.io/badge/Status-Active-green)
-
-</div>
+# Services
 
 ## 📋 Overview
 
@@ -14,6 +7,7 @@ Dokumentasi ini menjelaskan implementasi detail dari service-service yang diguna
 ## 👤 User Service Implementation
 
 ### Create User
+
 ```javascript
 // services/userService.js
 const { ValidationError, ConflictError } = require('../utils/errors');
@@ -47,6 +41,7 @@ const createUser = async (userData) => {
 ```
 
 ### Get User
+
 ```javascript
 const getUserByPhone = async (phone) => {
   try {
@@ -87,6 +82,7 @@ const getUserChildren = async (userId) => {
 ## 👶 Child Service Implementation
 
 ### Create Child
+
 ```javascript
 // services/childService.js
 const { ValidationError, NotFoundError } = require('../utils/errors');
@@ -121,6 +117,7 @@ const createChild = async (childData) => {
 ```
 
 ### Get Child
+
 ```javascript
 const getChildById = async (childId) => {
   try {
@@ -149,6 +146,7 @@ const getChildQuestionnaires = async (childId) => {
 ## 📝 Questionnaire Service Implementation
 
 ### Submit Questionnaire
+
 ```javascript
 // services/questionnaireService.js
 const { ValidationError, NotFoundError } = require('../utils/errors');
@@ -188,6 +186,7 @@ const submitQuestionnaire = async (questionnaireData) => {
 ```
 
 ### Get Results
+
 ```javascript
 const getResultsByChildId = async (childId) => {
   try {
@@ -220,6 +219,7 @@ const getResultsByChildId = async (childId) => {
 ## 💬 Message Service Implementation
 
 ### Send Message
+
 ```javascript
 // services/messageService.js
 const { ValidationError } = require('../utils/errors');
@@ -263,6 +263,7 @@ const sendMessage = async (messageData) => {
 ```
 
 ### Get Message History
+
 ```javascript
 const getMessageHistory = async (phone, options) => {
   try {
@@ -290,6 +291,7 @@ const getMessageHistory = async (phone, options) => {
 ## 🔄 Session Service Implementation
 
 ### Create Session
+
 ```javascript
 // services/sessionService.js
 const { ValidationError, NotFoundError } = require('../utils/errors');
@@ -330,6 +332,7 @@ const createSession = async (sessionData) => {
 ```
 
 ### End Session
+
 ```javascript
 const endSession = async (sessionId) => {
   try {
@@ -351,6 +354,7 @@ const endSession = async (sessionId) => {
 ## 📱 WhatsApp Service Implementation
 
 ### Send Message
+
 ```javascript
 // services/whatsappService.js
 const { ValidationError } = require('../utils/errors');
@@ -387,6 +391,7 @@ const sendMessage = async (phone, message) => {
 ```
 
 ### Handle Webhook
+
 ```javascript
 const handleWebhook = async (webhookData) => {
   try {
@@ -414,20 +419,3 @@ const handleWebhook = async (webhookData) => {
   }
 };
 ```
-
-## 📚 Dokumentasi Terkait
-
-- [API Services](../api/services.md)
-- [Controllers](controllers.md)
-- [Models](models.md)
-- [Utils](utils.md)
-
----
-
-<div align="center">
-
-### 🔗 Navigasi
-
-[⬅️ Kembali ke Controllers](controllers.md) | [Lanjut ke Models ➡️](models.md)
-
-</div> 

@@ -1,11 +1,4 @@
-# 🛣️ API Routes
-
-<div align="center">
-
-![API Routes](https://img.shields.io/badge/API-Routes-blue)
-![Status](https://img.shields.io/badge/Status-Active-green)
-
-</div>
+# Routes
 
 ## 📋 Overview
 
@@ -14,6 +7,7 @@ Dokumentasi ini menjelaskan route-route yang tersedia dalam API Chatbot Identifi
 ## 👤 User Routes
 
 ### Register User
+
 ```http
 POST /api/users/register
 Content-Type: application/json
@@ -27,11 +21,13 @@ Content-Type: application/json
 ```
 
 ### Get User Profile
+
 ```http
 GET /api/users/{phone}
 ```
 
 ### Update User Profile
+
 ```http
 PUT /api/users/{phone}
 Content-Type: application/json
@@ -45,6 +41,7 @@ Content-Type: application/json
 ## 👶 Child Routes
 
 ### Register Child
+
 ```http
 POST /api/children
 Content-Type: application/json
@@ -61,11 +58,13 @@ Content-Type: application/json
 ```
 
 ### Get Child Data
+
 ```http
 GET /api/children/{childId}
 ```
 
 ### Update Child Data
+
 ```http
 PUT /api/children/{childId}
 Content-Type: application/json
@@ -80,6 +79,7 @@ Content-Type: application/json
 ## 📝 Questionnaire Routes
 
 ### Submit Questionnaire
+
 ```http
 POST /api/questionnaires
 Content-Type: application/json
@@ -97,11 +97,13 @@ Content-Type: application/json
 ```
 
 ### Get Questionnaire Results
+
 ```http
 GET /api/questionnaires/{childId}
 ```
 
 ### Get Questionnaire History
+
 ```http
 GET /api/questionnaires/{childId}/history
 ```
@@ -109,6 +111,7 @@ GET /api/questionnaires/{childId}/history
 ## 💬 Message Routes
 
 ### Send Message
+
 ```http
 POST /api/messages
 Content-Type: application/json
@@ -121,6 +124,7 @@ Content-Type: application/json
 ```
 
 ### Get Message History
+
 ```http
 GET /api/messages/{phone}
 Query Parameters:
@@ -131,6 +135,7 @@ Query Parameters:
 ## 🔄 Session Routes
 
 ### Create Session
+
 ```http
 POST /api/sessions
 Content-Type: application/json
@@ -142,11 +147,13 @@ Content-Type: application/json
 ```
 
 ### End Session
+
 ```http
 PUT /api/sessions/{sessionId}/end
 ```
 
 ### Get Session Status
+
 ```http
 GET /api/sessions/{sessionId}
 ```
@@ -154,6 +161,7 @@ GET /api/sessions/{sessionId}
 ## 📱 WhatsApp Routes
 
 ### Webhook
+
 ```http
 POST /webhook/whatsapp
 Content-Type: application/json
@@ -167,6 +175,7 @@ Content-Type: application/json
 ```
 
 ### Send Template Message
+
 ```http
 POST /api/whatsapp/template
 Content-Type: application/json
@@ -186,6 +195,7 @@ Content-Type: application/json
 ## 🔒 Authentication Routes
 
 ### Get API Key
+
 ```http
 POST /api/auth/key
 Content-Type: application/json
@@ -197,6 +207,7 @@ Content-Type: application/json
 ```
 
 ### Refresh Token
+
 ```http
 POST /api/auth/refresh
 Content-Type: application/json
@@ -209,6 +220,7 @@ Content-Type: application/json
 ## 📊 Analytics Routes
 
 ### Get User Statistics
+
 ```http
 GET /api/analytics/users
 Query Parameters:
@@ -218,6 +230,7 @@ Query Parameters:
 ```
 
 ### Get Questionnaire Statistics
+
 ```http
 GET /api/analytics/questionnaires
 Query Parameters:
@@ -225,20 +238,3 @@ Query Parameters:
   - endDate: Date
   - groupBy: String (day, week, month)
 ```
-
-## 📚 Dokumentasi Terkait
-
-- [API Overview](README.md)
-- [Controllers](controllers.md)
-- [Services](services.md)
-- [Models](models.md)
-
----
-
-<div align="center">
-
-### 🔗 Navigasi
-
-[⬅️ Kembali ke Services](services.md) | [Lanjut ke Endpoints ➡️](endpoints.md)
-
-</div> 

@@ -1,11 +1,4 @@
-# 📦 Implementation: Models
-
-<div align="center">
-
-![Implementation](https://img.shields.io/badge/Implementation-Models-blue)
-![Status](https://img.shields.io/badge/Status-Active-green)
-
-</div>
+# Models
 
 ## 📋 Overview
 
@@ -14,6 +7,7 @@ Dokumentasi ini menjelaskan implementasi detail dari model-model data yang digun
 ## 👤 User Model Implementation
 
 ### Schema Definition
+
 ```javascript
 // models/User.js
 const mongoose = require('mongoose');
@@ -68,6 +62,7 @@ userSchema.pre('save', function(next) {
 ```
 
 ### Methods
+
 ```javascript
 userSchema.methods = {
   async updateProfile(data) {
@@ -97,6 +92,7 @@ userSchema.statics = {
 ## 👶 Child Model Implementation
 
 ### Schema Definition
+
 ```javascript
 // models/Child.js
 const mongoose = require('mongoose');
@@ -169,6 +165,7 @@ childSchema.pre('save', function(next) {
 ```
 
 ### Methods
+
 ```javascript
 childSchema.methods = {
   async updateMeasurements(data) {
@@ -213,6 +210,7 @@ childSchema.statics = {
 ## 📝 Questionnaire Model Implementation
 
 ### Schema Definition
+
 ```javascript
 // models/Questionnaire.js
 const mongoose = require('mongoose');
@@ -268,6 +266,7 @@ const questionnaireSchema = new Schema({
 ```
 
 ### Methods
+
 ```javascript
 questionnaireSchema.methods = {
   calculateScore() {
@@ -328,6 +327,7 @@ questionnaireSchema.statics = {
 ## 💬 Message Model Implementation
 
 ### Schema Definition
+
 ```javascript
 // models/Message.js
 const mongoose = require('mongoose');
@@ -377,6 +377,7 @@ const messageSchema = new Schema({
 ```
 
 ### Methods
+
 ```javascript
 messageSchema.methods = {
   async updateStatus(status) {
@@ -403,6 +404,7 @@ messageSchema.statics = {
 ## 🔄 Session Model Implementation
 
 ### Schema Definition
+
 ```javascript
 // models/Session.js
 const mongoose = require('mongoose');
@@ -448,6 +450,7 @@ const sessionSchema = new Schema({
 ```
 
 ### Methods
+
 ```javascript
 sessionSchema.methods = {
   async updateState(state, data = {}) {
@@ -489,20 +492,3 @@ sessionSchema.statics = {
   }
 };
 ```
-
-## 📚 Dokumentasi Terkait
-
-- [API Models](../api/models.md)
-- [Controllers](controllers.md)
-- [Services](services.md)
-- [Utils](utils.md)
-
----
-
-<div align="center">
-
-### 🔗 Navigasi
-
-[⬅️ Kembali ke Services](services.md) | [Lanjut ke Utils ➡️](utils.md)
-
-</div> 
